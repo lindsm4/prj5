@@ -7,7 +7,7 @@ public class SortedLinkedList<Glyph> extends LinkedList<Glyph> {
     private Node<Glyph> head;
     private Node<Glyph> tail;
     private int size;
-    private Comparator comp;
+    private GlyphComparator comp;
     
     public SortedLinkedList() {
         head = null;
