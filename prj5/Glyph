@@ -1,0 +1,88 @@
+package project5;
+
+import java.awt.Color;
+
+import CS2114.Shape;
+import CS2114.TextShape;
+import CS2114.Window;
+
+/**
+ * Glyph class
+ * @author Lindsey McCann lindsm4
+ *
+ */
+public class Glyph {
+    
+    private Window glyphWindow;
+    private TextShape SongTitle;
+    private TextShape SongArtist;
+    private Shape heard;
+    private Shape like;
+    private Shape divider;
+    private static final int BAR_HEIGHT = 40;
+    private static final int BAR_LENGTH = 6;
+    
+    private Shape bar1;
+    private Shape bar2;
+    private Shape bar3;
+    private Shape bar4;
+    private TextShape title;
+    private TextShape artist;
+    
+
+    /**
+     * constructor
+     */
+    public Glyph(Window glyphWindow) {
+        this.glyphWindow = glyphWindow;
+        
+    }
+    
+    /**
+     * display
+     */
+    public void displayGlyph() {
+        title = new TextShape(70, 10, "Song Title");
+        title.setBackgroundColor(Color.white);
+        glyphWindow.addShape(title);
+        
+        artist = new TextShape(70, 25, "by Artist");
+        artist.setBackgroundColor(Color.white);
+        glyphWindow.addShape(artist);
+        
+        divider = new Shape(100, 50, BAR_LENGTH, BAR_HEIGHT, Color.BLACK);
+        glyphWindow.addShape(divider);
+        
+        //x, y, height, width
+        bar1 = new Shape(40, 50, 125, 10, Color.magenta);
+        glyphWindow.addShape(bar1);
+        
+        bar2 = new Shape(40, 60, 125, 10, Color.blue);
+        glyphWindow.addShape(bar2);
+        
+        bar3 = new Shape(40, 70, 125, 10, Color.orange);
+        glyphWindow.addShape(bar3);
+        
+        bar4 = new Shape(40, 80, 125, 10, Color.green);
+        glyphWindow.addShape(bar4);
+    }
+    
+    /**
+     * 
+     */
+    public void createHobbyBars() {
+        
+        
+        
+    }
+    
+    public void createMajorBars() {
+        
+    }
+    
+    public void createRegionBars() {
+        
+    }
+    
+    
+}
