@@ -1,0 +1,113 @@
+package project5;
+
+import java.awt.Color;
+
+import CS2114.Shape;
+import CS2114.TextShape;
+import CS2114.Window;
+
+/**
+ * 
+ * @author lindseym
+ *
+ */
+public class Legend {
+    
+    private Shape rectangle;
+    private Shape divider;
+    private TextShape heard;
+    private TextShape likes;
+    private TextShape songTitle;
+    private TextShape firstLine;
+    private TextShape secondLine;
+    private TextShape thirdLine;
+    private TextShape fourthLine;
+    private TextShape fifthLine;
+    private Window window;
+    
+    
+    /**
+     * constructor
+     * @param window2 
+     */
+    public Legend(Window window2) {
+        this.window = window;
+        
+    }
+    
+    /**
+     * set up the legend
+     */
+    public void displayOn(Window mainWindow) {
+        divider = new Shape(800, 245, 8, 40, Color.BLACK);
+        mainWindow.addShape(divider);
+        
+        heard = addTextShape("Heard", 755, 250);
+        likes = addTextShape("Likes", 810, 250);
+        mainWindow.addShape(heard);
+        mainWindow.addShape(likes);
+        
+        songTitle = addTextShape("Song Title", 770, 225);
+        mainWindow.addShape(songTitle);
+        
+        //hobby, major or region
+        firstLine = addTextShape("empty", 755, 145);
+        mainWindow.addShape(firstLine);
+        
+        //magenta
+        secondLine = addTextShape("empty", 755, 160);
+        secondLine.setForegroundColor(Color.magenta);
+        mainWindow.addShape(secondLine);
+        
+        //blue
+        thirdLine = addTextShape("empty", 755, 175);
+        thirdLine.setForegroundColor(Color.blue);
+        mainWindow.addShape(thirdLine);
+        
+        //yellow
+        fourthLine = addTextShape("empty", 755, 190);
+        fourthLine.setForegroundColor(Color.yellow);
+        mainWindow.addShape(fourthLine);
+        
+        //green
+        fifthLine = addTextShape("empty", 755, 205); 
+        fifthLine.setForegroundColor(Color.green);
+        mainWindow.addShape(fifthLine);
+        
+        //x, y, height, width, color 
+        //660, 130
+        rectangle = new Shape(750, 140, 110, 150, Color.white);
+        rectangle.setBackgroundColor(Color.white);
+        rectangle.setForegroundColor(Color.black);
+        mainWindow.addShape(rectangle);
+        
+
+        
+    }
+    
+    /**
+     * Sets up text shapes to be added with a white background
+     */
+    private TextShape addTextShape(String string, int x, int y) {
+        TextShape textShape = new TextShape(x, y, string);
+        textShape.setBackgroundColor(Color.WHITE);
+
+        return textShape;
+    }
+    
+    public void setTypeToMajor() {
+        
+    }
+    
+    public void setTypeToHobby() {
+        
+    }
+    
+    public void setTypeToRegion() {
+        
+    }
+    
+    public void getType() {
+        
+    }
+}
