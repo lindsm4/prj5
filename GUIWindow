@@ -1,0 +1,186 @@
+package project5;
+
+import java.awt.Color;
+
+import CS2114.Button;
+import CS2114.Shape;
+import CS2114.TextShape;
+import CS2114.Window;
+import CS2114.WindowSide;
+
+/**
+ * The window class
+ * 
+ * @author Lindsey McCann lindsm4
+ *
+ */
+public class GUIWindow {
+
+    private int screen;
+    // private SortedLinkedList<Glyph> glyphs;
+    private Legend legend;
+    private Glyph glyph;
+    private Button onClickedNext;
+    private Button SortArtist;
+    private Button SortSongTitle;
+    private Button SortReleaseYear;
+    private Button SortByGenre;
+    private Button RepresentHobby;
+    private Button RepresentMajor;
+    private Button RepresentRegion;
+    private Button quit;
+    private Button previous;
+    private Button next;
+    private Window window;
+
+
+    /**
+     * The constructor
+     * 
+     */
+    public GUIWindow() {
+        window = new Window();
+        window.setTitle("lawps7, lancem9, lindsm4");
+        windowSetUp();
+        legend = new Legend(window);
+        legend.displayOn(window);
+        
+        glyph = new Glyph(window);
+        glyph.displayGlyph();
+    }
+
+    /**
+     * Window set up
+     */
+    public void windowSetUp() {
+        // top buttons
+        previous = new Button("<- Previous");
+        window.addButton(previous, WindowSide.NORTH);
+        previous.onClick(this, "clickedPrevious");
+        
+        SortArtist = new Button("Sort by Artist Name");
+        window.addButton(SortArtist, WindowSide.NORTH);
+        SortArtist.onClick(this, "SortArtist");
+
+        SortSongTitle = new Button("Sort by Song Title");
+        window.addButton(SortSongTitle, WindowSide.NORTH);
+        SortSongTitle.onClick(this, "SortSongTitle");
+
+        SortReleaseYear = new Button("Sort by Release Year");
+        window.addButton(SortReleaseYear, WindowSide.NORTH);
+        SortReleaseYear.onClick(this, "SortReleaseYear");
+
+        SortByGenre = new Button("Sort by Genre");
+        window.addButton(SortByGenre, WindowSide.NORTH);
+        SortByGenre.onClick(this, "SortByGenre");
+        
+        next = new Button("Next ->");
+        window.addButton(next, WindowSide.NORTH);
+        next.onClick(this, "onClickedNext");
+
+        // bottom buttons
+        RepresentHobby = new Button("Represent Hobby");
+        window.addButton(RepresentHobby, WindowSide.SOUTH);
+        RepresentHobby.onClick(this, "RepresentHobby");
+
+        RepresentMajor = new Button("Represent Major");
+        window.addButton(RepresentMajor, WindowSide.SOUTH);
+        RepresentMajor.onClick(this, "RepresentMajor");
+
+        RepresentRegion = new Button("Represent Region");
+        window.addButton(RepresentRegion, WindowSide.SOUTH);
+        RepresentRegion.onClick(this, "RepresentRegion");
+        
+        quit = new Button("Quit");
+        window.addButton(quit, WindowSide.SOUTH);
+        quit.onClick(this, "clickedQuit");
+    }
+
+    public static void main(String[] args) {
+        new GUIWindow();
+    }
+    /**
+     * 
+     */
+    public void onClickedNext(Button next) {
+
+    }
+
+    /**
+     * 
+     */
+    public void sortArtist() {
+
+    }
+
+    /**
+     * 
+     */
+    public void sortSongTitle() {
+
+    }
+
+    /**
+     * 
+     */
+    public void sortReleaseYear() {
+
+    }
+
+    /**
+     * 
+     */
+    public void sortByGenre() {
+
+    }
+
+    /**
+     * 
+     */
+    public void representGenre() {
+
+    }
+
+    /**
+     * 
+     */
+    public void representHobby() {
+
+    }
+
+    /**
+     * 
+     */
+    public void representRegion() {
+
+    }
+
+    /**
+     * Closes out the window
+     */
+    public void clickedQuit(Button button) {
+        System.exit(0);
+    }
+
+    /**
+     * 
+     */
+    public void clickedPrevious() {
+
+    }
+
+    /**
+     * 
+     */
+    public void clickedNext() {
+
+    }
+
+    /**
+     * 
+     */
+    public void clickedRepaint() {
+
+    }
+
+}
