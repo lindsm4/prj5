@@ -11,6 +11,7 @@ package prj5;
 public class Node<E> {
     private E data;
     private Node<E> next;
+    private Node<E> prev;
     
     /**
      * Constructor that makes a new Node
@@ -20,6 +21,7 @@ public class Node<E> {
     public Node(E data) {
         this.data = data;
         next = null;
+        prev = null;
     }
     
     /**
@@ -28,8 +30,9 @@ public class Node<E> {
      * @param data is the data for this Node.
      * @param next is the reference to the next Node.
      */
-    public Node(E data, Node next) {
+    public Node(E data, Node<E> prev, Node<E> next) {
         this.data = data;
+        this.prev = prev;
         this.next = next;
     }
     
@@ -50,6 +53,14 @@ public class Node<E> {
     }
     
     /**
+     * Gets the previous Node.
+     * @return Returns the previous reference Node.
+     */
+    public Node<E> getPrev() {
+        return prev;
+    }
+    
+    /**
      * Changes the data of the Node.
      * @param data is the new data for this Node.
      */
@@ -63,5 +74,13 @@ public class Node<E> {
      */
     public void setNext(Node<E> next) {
         this.next = next;
+    }
+    
+    /**
+     * Changes the previous Node.
+     * @param prev is the new previous Node for this Node.
+     */
+    public void setPrev(Node<E> prev) {
+        this.prev = prev;
     }
 }
